@@ -182,7 +182,7 @@ function generateClientId() {
     return "CL_" + Math.random().toString(36).substr(2, 9);
 }
 
-app.post("/login", async (req, res) => {
+app.post("api/login", async (req, res) => {
     const { client_email, client_password } = req.body;
 
     try {
