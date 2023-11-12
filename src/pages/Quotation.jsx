@@ -34,7 +34,7 @@ const Quotation = () => {
         };
 
         try {
-            const response = await fetch("https://ccsreservaton.online/transaction", {
+            const response = await fetch("https://ccsreservaton.online/api/transaction", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
@@ -65,29 +65,29 @@ const Quotation = () => {
     useEffect(() => {
         const getReservationDetails = async () => {
             const response = await fetch(
-                `https://ccsreservaton.online/reservations/${reservation_id}`
+                `https://ccsreservaton.online/api/reservations/${reservation_id}`
             );
             const res = await response.json();
 
             const response2 = await fetch(
-                `https://ccsreservaton.online/event/${res.event_id}`
+                `https://ccsreservaton.online/api/event/${res.event_id}`
             );
             const res2 = await response2.json();
 
             const response3 = await fetch(
-                `https://ccsreservaton.online/adds_on/${reservation_id}`
+                `https://ccsreservaton.online/api/adds_on/${reservation_id}`
             );
             const res3 = await response3.json();
 
             const response4 = await fetch(
-                `https://ccsreservaton.online/foods/
+                `https://ccsreservaton.online/api/foods/
                 `
             );
 
             const res4 = await response4.json();
 
             const response5 = await fetch(
-                `https://ccsreservaton.online/reservation_food/${reservation_id}`
+                `https://ccsreservaton.online/api/reservation_food/${reservation_id}`
             );
 
             const res5 = await response5.json();
