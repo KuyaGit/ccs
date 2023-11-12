@@ -250,7 +250,7 @@ app.post("/login", async (req, res) => {
     }
 });
 
-//http://localhost:7723/clients
+//https://ccsreservaton.online//clients
 app.get("/clients", async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM client_table");
@@ -261,7 +261,7 @@ app.get("/clients", async (req, res) => {
     }
 });
 
-//http://localhost:7723/menu
+//https://ccsreservaton.online//menu
 app.get("/foods", async (req, res) => {
     try {
         const result = await pool.query("SELECT * FROM food_table");
