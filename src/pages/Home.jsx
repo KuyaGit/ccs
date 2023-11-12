@@ -55,7 +55,7 @@ const Home = () => {
             try {
                 //via post request
 
-                const response = await fetch("https://ccsreservaton.online//client/", {
+                const response = await fetch("https://ccsreservaton.online/client/", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ client_id: customerID }),
